@@ -1,0 +1,37 @@
+.taskCardGroup {
+  margin-bottom: 1.5rem;
+
+  .taskCard {
+    border-left: 3px solid rgba(100, 100, 100);
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+
+.taskCard {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  input,
+  label {
+    color: var(--text);
+    font-weight: 600;
+    cursor: pointer;
+
+    
+  }
+}
+
+.loader {
+  margin-inline: 0.6rem !important;
+  margin-block: 0.5rem;
+}
+
+.inlineField {
+  margin-left: 0.6rem !important;
+}

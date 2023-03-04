@@ -1,0 +1,28 @@
+.taskForm {
+  display: flex;
+  flex-flow: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+
+  div {
+    font-size: 1rem;
+  }
+
+  input,
+  label {
+    color: var(--text);
+  }
+}
+
+.formButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+.datePicker > * {
+  color: var(--text) !important;
+
+  * {
+    color: var(--text) !important;
+  }
+}

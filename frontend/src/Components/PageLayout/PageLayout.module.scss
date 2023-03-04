@@ -1,0 +1,8 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+
+  .header {
+    font-family: var(--accent-font-family);
+  }
+}

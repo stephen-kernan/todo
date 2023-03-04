@@ -1,0 +1,17 @@
+.emptyList {
+  width: 100%;
+  text-align: center;
+
+  .illustrationContainer {
+    width: 100%;
+    display: flex;
+
+    img {
+      width: 80%;
+      height: min-content;
+
+      margin-inline: auto;
+      margin-block: 2rem;
+    }
+  }
+}

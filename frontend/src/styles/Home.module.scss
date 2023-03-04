@@ -1,0 +1,38 @@
+.viewSelect {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+
+  div {
+    cursor: pointer;
+
+    &:hover {
+      color: var(--primary);
+    }
+  }
+
+  .active {
+    border-bottom: 3px solid var(--primary);
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .body {
+    width: 100%;
+
+    img {
+      width: 50% !important;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .body {
+    width: 100%;
+
+    img {
+      width: 25% !important;
+    }
+  }
+}

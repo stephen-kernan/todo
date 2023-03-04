@@ -1,0 +1,47 @@
+:root {
+  --primary: #8075ff;
+  --background: #373638;
+  --background-light: #474648;
+  --text: #fffdf0;
+
+  --accent-font-family: "Volkhov", serif;
+  --primary-font-family: "Commissioner", sans-serif !important;
+}
+
+#_next {
+  background-color: var(--background);
+}
+
+html,
+body,
+main {
+  background-color: var(--background) !important;
+
+  font-size: 18px;
+  font-family: var(--primary-font-family);
+  color: var(--text);
+}
+
+main {
+  margin: 1rem;
+}
+
+button {
+  font-size: 1rem !important;
+  font-family: var(--primary-font-family) !important;
+  font-weight: 700 !important;
+  text-transform: capitalize !important;
+}
+
+.MuiInputBase-root {
+  border: 3px solid black !important;
+  border-radius: 5px;
+  background-color: var(--background-light) !important;
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    width: 80%;
+    margin-inline: auto;
+  }
+}
