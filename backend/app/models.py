@@ -14,13 +14,6 @@ class Tag(Base):
   name = Column(String)
   
 
-class TaskStruct(BaseModel):
-  id: Optional[int]
-  name: Optional[str]
-  completed: Optional[bool]
-  completed_on: Optional[datetime]
-  due_date: Optional[datetime]
-
 class Task(Base):
   __tablename__ = 'tasks'
 
@@ -29,6 +22,13 @@ class Task(Base):
   completed = Column(Boolean)
   completed_on = Column(DateTime)
   due_date = Column(DateTime)
+
+class TaskStruct(BaseModel):
+  id: Optional[int]
+  name: Optional[str]
+  completed: Optional[bool]
+  completed_on: Optional[datetime]
+  due_date: Optional[datetime]
 
 task_tags = Table(
   "task_tags",

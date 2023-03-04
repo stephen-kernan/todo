@@ -8,6 +8,15 @@
 
 This is a To-Do application that allows a user to create, read, edit, and complete To-Do items.
 
+### Endpoints
+
+`/tasks GET` - Get all tasks
+`/tasks/task POST` - Create a new task. Must include a name.
+`/tasks/task/{task_id} GET` - Get a task by its `id`
+`/tasks/task/{task_id} PUT` - Update a task by its `id`
+`/tasks/task/{task_id} DELETE` - Delete a task by its `id`
+
+
 ### Technology Choices
 
 - Frontend

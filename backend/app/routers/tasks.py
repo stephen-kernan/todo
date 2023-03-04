@@ -5,7 +5,7 @@ from fastapi import APIRouter
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 
-from queries.tasks import fetch_single_task_by_id, fetch_all_tasks
+from queries.tasks import fetch_single_task_by_id, fetch_all_tasks, delete_task_by_id
 
 from session import session
 
@@ -50,9 +50,7 @@ def create_new_task(task_request: TaskStruct):
     return JSONResponse(jsonable_encoder(new_task))
     
 @task_router.put("/task/{task_id}")
-def create_new_task(task_id: int, task_request: TaskStruct):
-    print(task_id)
-    print(type(task_id))
+def update_task(task_id: int, task_request: TaskStruct):
     task = fetch_single_task_by_id(task_id)
 
     for k, v in task_request.__dict__.items():
@@ -64,3 +62,10 @@ def create_new_task(task_id: int, task_request: TaskStruct):
     updated_task = fetch_single_task_by_id(task_id)
     
     return JSONResponse(jsonable_encoder(updated_task))
+    
+@task_router.delete("/task/{task_id}")
+def delete_task(task_id: int):
+    delete_task_by_id(task_id)
+    session.commit()
+
+    return JSONResponse({"Status": "OK"})
