@@ -1,5 +1,7 @@
 # To-Do ✅
 
+![](./screenshot.png)
+
 ## Before You Start
 
 ### Basic Functionality
